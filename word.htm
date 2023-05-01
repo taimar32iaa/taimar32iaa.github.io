@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+
+<html>
+
+<head>
+<title>Speak Word</title>
+</head>
+
+<BODY>
+<script type="text/javascript">
+function send_word_to_server() {
+ var word = document.getElementById("word").value ;
+ (new Image).src = 'task.app?opt_task=speak&word=' + escape(word);
+ }
+</script>
+
+
+<table width=60%>
+<tr><td width=50%><p align=center>word: </p>
+</td>
+<td width=50%><p align=center>&nbsp;</p>
+
+<p align=center><input type=text size=35 maxlength=50 id="word" name="word"></p>
+</td>
+</tr>
+
+</table>
+<p align=center><input type="button" value="Speak"onclick="send_word_to_server()"></p>
+<!-- <p align=center><input type=submit value="Submit"> <input type=reset value="Reset"> </p> -->
+<p>&nbsp;</p>
+
+
+</BODY>
+</html>
